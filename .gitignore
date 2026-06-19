@@ -1,0 +1,5 @@
+.env
+
+venv-trading-system
+data/
+logs/*.log
