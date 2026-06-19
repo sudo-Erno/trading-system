@@ -6,6 +6,8 @@ from datetime import datetime, timedelta
 from dotenv import load_dotenv, find_dotenv
 
 from logs import get_core_logger
+from utils import save_market_data_to_csv
+
 
 load_dotenv(find_dotenv())
 
@@ -76,15 +78,8 @@ def fetch_market_data(exchange, symbol, timeframe, save_dir=None, days_back=30):
 
     # Save to CSV if a directory was specified
     if save_dir:
-        os.makedirs(save_dir, exist_ok=True)
-        # Create a safe filename (e.g., BTC_USDT_4h.csv)
-        safe_symbol = symbol.replace('/', '_')
-        filename = f"{safe_symbol}_{timeframe}.csv"
-        filepath = os.path.join(save_dir, filename)
-        
-        df.to_csv(filepath)
-        print(f"Data successfully saved to {filepath}")
-        
+        save_market_data_to_csv(df, symbol, timeframe, save_dir)
+
     return df
 
 
