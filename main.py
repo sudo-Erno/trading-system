@@ -33,4 +33,4 @@ save_market_data_to_csv(df_feature_btc, SYMBOL, "1h", os.getenv("BINANCE_FEATURE
 
 # thread_save_df = threading.Thread(target=save_dataframe_to_csv, args=(df_futures_io_btc, os.getenv("BINANCE_FUTURE_IO_SAVE_DIR")))
 
-# thread_save_df.start()
+# thread_save_df.start() 
