@@ -1,0 +1,21 @@
+{
+  "trading": {
+    "timeframe": "4h",
+    "historical_days_back": 30,
+    "cycle_sleep_seconds": 60
+  },
+  "assets": {
+    "crypto": [
+      "BTC/USDT",
+      "ETH/USDT"
+    ],
+    "tradfi_dynamic_count": 3
+  },
+  "llm": {
+    "ollama_url": "http://localhost:11434/api/generate",
+    "model": "qwen2.5:32b"
+  },
+  "system": {
+    "data_dir": "./data"
+  }
+}
